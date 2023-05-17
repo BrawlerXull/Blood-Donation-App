@@ -1,3 +1,4 @@
+import 'package:blooddonation/components/bloodGroupDonorPage.dart';
 import 'package:flutter/material.dart';
 
 class DonorPage extends StatefulWidget {
@@ -34,74 +35,23 @@ class _DonorPageState extends State<DonorPage> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 180,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: const Color.fromRGBO(231, 211, 183, 1.0),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "A",
-                      style: TextStyle(fontSize: 37),
-                    ),
-                  ),
-                ),
-                const SizedBox(
+              children: const [
+                BloodGroupDonorPage(compText: "A"),
+                SizedBox(
                   width: 30,
                 ),
-                Container(
-                  width: 180,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: const Color.fromRGBO(231, 211, 183, 1.0),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "B",
-                      style: TextStyle(fontSize: 37),
-                    ),
-                  ),
-                ),
+                BloodGroupDonorPage(compText: "B"),
               ],
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                    width: 180,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      color: const Color.fromRGBO(231, 211, 183, 1.0),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "O",
-                        style: TextStyle(fontSize: 37),
-                      ),
-                    )),
-                const SizedBox(
+              children: const [
+                BloodGroupDonorPage(compText: "AB"),
+                SizedBox(
                   width: 30,
                 ),
-                Container(
-                  width: 180,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: const Color.fromRGBO(231, 211, 183, 1.0),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "AB",
-                      style: TextStyle(fontSize: 37),
-                    ),
-                  ),
-                ),
+                BloodGroupDonorPage(compText: "O"),
               ],
             ),
             const SizedBox(
