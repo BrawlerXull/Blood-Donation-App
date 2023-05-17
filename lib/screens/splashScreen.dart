@@ -1,3 +1,4 @@
+import 'package:blooddonation/screens/entryPage.dart';
 import 'package:blooddonation/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage())));
+            context, MaterialPageRoute(builder: (context) => EntryPage())));
   }
 
   Widget build(BuildContext context) {
