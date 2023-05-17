@@ -1,3 +1,4 @@
+import 'package:blooddonation/screens/donorPage.dart';
 import 'package:flutter/material.dart';
 
 class EntryPage extends StatelessWidget {
@@ -24,17 +25,25 @@ class EntryPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                width: 180,
-                height: 80,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  color: const Color.fromRGBO(231, 211, 183, 1.0),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Donor",
-                    style: TextStyle(fontSize: 37),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DonorPage()),
+                  );
+                },
+                child: Container(
+                  width: 180,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: const Color.fromRGBO(231, 211, 183, 1.0),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Donor",
+                      style: TextStyle(fontSize: 37),
+                    ),
                   ),
                 ),
               ),
