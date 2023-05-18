@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:blooddonation/components/bloodGroupDonorPage.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:blooddonation/main.dart';
 
-class BloodGroupDonorPage extends StatelessWidget {
+class BloodGroupDonorPage extends StatefulWidget {
   final String compText;
 
   const BloodGroupDonorPage({
@@ -10,18 +12,33 @@ class BloodGroupDonorPage extends StatelessWidget {
   });
 
   @override
+  _BloodGroupDonorPageState createState() => _BloodGroupDonorPageState();
+}
+
+class _BloodGroupDonorPageState extends State<BloodGroupDonorPage> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 180,
-      height: 80,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        color: const Color.fromRGBO(231, 211, 183, 1.0),
-      ),
-      child: Center(
-        child: Text(
-          compText,
-          style: TextStyle(fontSize: 37),
+    var globalData = Provider.of<GlobalData>(context);
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          globalData.data['blood'] = widget.compText;
+        });
+        print(widget.compText);
+        // print(globalData.data['blood']);
+      },
+      child: Container(
+        width: 180,
+        height: 80,
+        decoration: BoxDecoration(
+          color: const Color.fromRGBO(231, 211, 183, 1.0),
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Center(
+          child: Text(
+            widget.compText,
+            style: TextStyle(fontSize: 37),
+          ),
         ),
       ),
     );
