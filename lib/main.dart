@@ -4,13 +4,14 @@ import 'package:provider/provider.dart';
 import 'dart:convert';
 
 class GlobalData extends ChangeNotifier {
-  var data = {'blood': 'A'};
+  // var data = {'blood': 'A'};
+  List<String> group = ['A', 'B', 'AB'];
 
-  late String data1;
+  // late String data1;
 
-  GlobalData() {
-    data1 = json.encode(data);
-  }
+  // GlobalData() {
+  //   data1 = json.encode(data);
+  // }
 
   // void updateData(String newData) {
   //   data = newData;

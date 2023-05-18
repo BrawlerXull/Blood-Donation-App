@@ -1,4 +1,5 @@
 import 'package:blooddonation/components/bloodGroupDonorPage.dart';
+import 'package:blooddonation/screens/entryPage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:blooddonation/main.dart';
