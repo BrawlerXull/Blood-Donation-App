@@ -67,6 +67,7 @@ flutter:
     - assets/pngegg-3.png
     - assets/pngegg-4.png
     - assets/details.png
+    - assets/thanku.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
