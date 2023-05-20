@@ -24,8 +24,8 @@ class _BloodGroupDonorPageState extends State<BloodGroupDonorPage> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          globalData.group.add(widget.compText);
-          print(globalData.group);
+          globalData.setPerson(blood: widget.compText);
+          print(globalData.person.blood.toString());
         });
         print(widget.compText);
         Navigator.push(

@@ -4,22 +4,39 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'dart:convert';
 
+class Person {
+  String name;
+  String div;
+  String roll;
+  String city;
+  String why;
+  String blood;
+
+  Person(
+    this.name,
+    this.div,
+    this.roll,
+    this.city,
+    this.why,
+    this.blood,
+  );
+}
+
 class GlobalData extends ChangeNotifier {
-  // var data = {'blood': 'A'};
-  List<String> group = [
-    'A',
-  ];
+  Person _person = Person('', '', '', '', '', '');
 
-  // late String data1;
+  Person get person => _person;
 
-  // GlobalData() {
-  //   data1 = json.encode(data);
-  // }
-
-  // void updateData(String newData) {
-  //   data = newData;
-  //   notifyListeners();
-  // }
+  void setPerson(
+      {String name = "",
+      String div = "",
+      String roll = "",
+      String city = "",
+      String why = "",
+      String blood = ""}) {
+    _person = Person(name, div, roll, city, why, blood);
+    notifyListeners();
+  }
 }
 
 void main() {
