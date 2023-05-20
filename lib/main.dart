@@ -1,3 +1,4 @@
+import 'package:blooddonation/screens/entryPage.dart';
 import 'package:blooddonation/screens/splashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -5,7 +6,9 @@ import 'dart:convert';
 
 class GlobalData extends ChangeNotifier {
   // var data = {'blood': 'A'};
-  List<String> group = ['A', 'B', 'AB'];
+  List<String> group = [
+    'A',
+  ];
 
   // late String data1;
 

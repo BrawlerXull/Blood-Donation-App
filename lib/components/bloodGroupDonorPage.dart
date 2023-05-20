@@ -1,4 +1,5 @@
 import 'package:blooddonation/screens/entryPage.dart';
+import 'package:blooddonation/screens/pastDiseasesPage.dart';
 import 'package:flutter/material.dart';
 import 'package:blooddonation/components/bloodGroupDonorPage.dart';
 import 'package:flutter/material.dart';
@@ -25,15 +26,12 @@ class _BloodGroupDonorPageState extends State<BloodGroupDonorPage> {
         setState(() {
           globalData.group.add(widget.compText);
           print(globalData.group);
-          // globalData.data['blood'] = widget.compText;
         });
-
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => EntryPage()),
-        // );
         print(widget.compText);
-        // print(globalData.data['blood']);
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PastDiseasesPage()),
+        );
       },
       child: Container(
         width: 180,
